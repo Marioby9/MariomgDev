@@ -1,0 +1,20 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import SectionContainer from "@/components/SectionContainer.astro";
+import AllProjects from "@/components/AllProjects.astro";
+import CodeIcon from "@/components/icons/Code.astro";
+---
+
+<Layout title="Mis Proyectos" description="Proyectos de Mario Martín.">
+  <main class="px-4">
+    <SectionContainer class="mt-10">
+      <h2
+        class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80"
+      >
+        <CodeIcon class="size-7" />
+        Todos mis proyectos
+      </h2>
+      <AllProjects />
+    </SectionContainer>
+  </main>
+</Layout>

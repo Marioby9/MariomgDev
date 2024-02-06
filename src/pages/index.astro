@@ -9,6 +9,7 @@ import Experience from "@/components/Experience.astro"
 import GitHubIcon from "@/components/icons/GitHub.astro"
 import LinkedInIcon from "@/components/icons/LinkedIn.astro"
 import CopyIcon from "@/components/icons/Copy.astro"
+import Plus from "@/components/icons/Plus.astro"
 import ProfileCheck from "@/components/icons/ProfileCheck.astro"
 import Projects from "@/components/Projects.astro"
 import SectionContainer from "@/components/SectionContainer.astro"
@@ -85,9 +86,15 @@ import SocialPill from "@/components/SocialPill.astro"
         class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80"
       >
         <CodeIcon class="size-7" />
-        Proyectos
+        Proyectos principales
       </h2>
       <Projects />
+      <div class="flex justify-center mt-16 text-gray-400">
+        <a href="/MariomgDev/Projects" class="flex gap-3">
+          <Plus class="size-6 text-gray-400" />
+          Ver más proyectos
+        </a>
+      </div>
     </SectionContainer>
 
     <SectionContainer id="sobre-mi">
@@ -95,7 +102,7 @@ import SocialPill from "@/components/SocialPill.astro"
         class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80"
       >
         <ProfileCheck class="size-7" />
-        Sobre mi
+        Sobre mí
       </h2>
       <AboutMe />
     </SectionContainer>

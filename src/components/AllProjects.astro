@@ -7,6 +7,7 @@ import FirebaseJS from "./icons/FirebaseJS.astro"
 import PHP from "./icons/PHP.astro"
 import JS from "./icons/JS.astro"
 import MySQL from "./icons/MySQL.astro"
+import Java from "./icons/Java.astro"
 import LinkButton from "./LinkButton.astro"
 
 
@@ -46,6 +47,16 @@ const TAGS = {
     class: "bg-[#003159] text-white",
     icon: MySQL,
   },
+  ORACLE: {
+    name: "Oracle",
+    class: "bg-[#003159] text-white",
+    icon: MySQL,
+  },
+  Java: {
+    name: "Java",
+    class: "bg-[#fff] text-black font-semibold",
+    icon: Java,
+  },
 }
 const PROJECTS = [
   {
@@ -74,6 +85,49 @@ const PROJECTS = [
     github: "https://github.com/Marioby9/NovaForge",
     image: "/MariomgDev/projects/novaForge.webp",
     tags: [TAGS.VUE, TAGS.FIREBASE, TAGS.TAILWIND],
+  },
+  {
+    title: "NovaServer - Aplicación servidor para NovaForge.",
+    description:
+      "Aplicación web para modificar los valores de los sensores y comprobar la reactividad de los ejectures. Parte de servidor que consume NovaForge. Creada desde cero con VUE.js y Tailwind CSS.",
+    link: "https://marioby9.github.io/NovaServer/",
+    github: "https://github.com/Marioby9/NovaServer",
+    image: "/MariomgDev/projects/novaServer.webp",
+    tags: [TAGS.VUE, TAGS.FIREBASE, TAGS.TAILWIND],
+  },
+  {
+    title: "VideoClub - Aplicación ORM y MVC en servidor.",
+    description:
+      "Aplicación web gestora para un videoclub real. El videoclub puede añadir, eliminar y actualizar productos. Sistema de BBDD con tecnología ORM. Creada desde cero con HTML5, CSS3, PHP, y JavaScript.",
+    link: "https://videocluborm.000webhostapp.com/",
+    github: "https://github.com/Marioby9/VideoClub",
+    image: "/MariomgDev/projects/videoclub.webp",
+    tags: [TAGS.PHP, TAGS.JS, TAGS.CSS, TAGS.MYSQL],
+  },
+  {
+    title: "PokeApi - Buscador de Pokemons.",
+    description:
+      "Aplicación web para buscar pokemons y mostrar su información. Creado con HTML, CSS y JavaScript Vanilla. Consume datos JSON de la API con la librería Axios",
+    link: "https://marioby9.github.io/PokeAPI/",
+    github: "https://github.com/Marioby9/PokeAPI",
+    image: "/MariomgDev/projects/pokeapi.webp",
+    tags: [TAGS.JS, TAGS.CSS],
+  },
+  {
+    title: "BiblioTech - Controla todos tus hobbies con una sola aplicación.",
+    description:
+      "Proyecto final de 1º DAW. Aplicación de escritorio para llevar un seguimiento de tus hobbies (libros, juegos y música). Puedes añadir recurso, estado (finalizado o no) y añadirlo a una lista de favoritos. Desarrollado con librerías de JavaFX, acceso a Base de datos de Oracle y estilado con CSS.",
+    github: "https://github.com/Marioby9/BiblioTech",
+    image: "/MariomgDev/projects/bibliotech.webp",
+    tags: [TAGS.Java, TAGS.CSS, TAGS.ORACLE],
+  },
+  {
+    title: "Password-Generator - Genera contraseñas seguras con los parámetros que quieras.",
+    description:
+      "Mi primer proyecto de escritorio. Aplicación de escritorio desarrollada con JavaFX. Genera contraseñas aleatorias con el nivel de seguridad y los parámetros indicados por el usuario. Una vez generada, se puede copiar al portapapeles.",
+    github: "https://github.com/Marioby9/Password-Generator",
+    image: "/MariomgDev/projects/passwordGen.webp",
+    tags: [TAGS.Java, TAGS.CSS],
   },
 ]
 ---
@@ -111,7 +165,8 @@ const PROJECTS = [
               Ver código fuente
             </LinkButton>
           )}
-          <LinkButton href={link}>
+          {link ? 
+            <LinkButton href={link}>
             <svg
               width="24"
               height="24"
@@ -136,7 +191,9 @@ const PROJECTS = [
               </>
             </svg>
             Ir al sitio web
-          </LinkButton>
+            </LinkButton> 
+          : ''}
+          
         </footer>
       </article>
     ))
