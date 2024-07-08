@@ -6,21 +6,21 @@ const EXPERIENCIE = [
     title: "Desarrollador FullStack - Stiga CX",
     description:
       "Trabajo como Desarrollador Angular e Ionic en la parte de front y con .NET en la parte de back. Realizo Aplicaciones Web para que diversas empresas puedan mantener un seguimiento sobre la valoración de sus clientes respecto a sus servicios.",
-    ball: "#4ade80"
+    ball: "#22c55e"
   },
   {
     date: "Marzo 2024 - Junio 2024",
     title: "Desarrollador en prácticas  − Mercanza",
     description:
       "He realizado mis prácticas como desarrollador en Mercanza. Esta primera experiencia me sirvió para aprender sobre cómo es trabajar en un equipo de desarrollo a nivel profesional. Además, adquirí conocimientos en .NET y Angular.",
-    ball: "#7dd3fc"
+    ball: "#dc2626"
     },
   {
     date: "Junio 2019 - Agosto 2023",
     title: "Socorrista Acuático  − Ozonio",
     description:
       "He trabajado como socorrista en piscinas de Madrid durante varios veranos completos. Este primer trabajo me ayudó a adquirir una primera toma de contacto con el mundo laboral y gestionar nuevas responsabilidades como el mantenimiento de piscinas.",
-    ball: "#7dd3fc"
+    ball: "#dc2626"
     },
 ]
 ---
@@ -29,6 +29,7 @@ const EXPERIENCIE = [
   {
     EXPERIENCIE.map((experiencie) => (
       <li class="mb-10 ms-4">
+        <div class="absolute w-3 h-3 rounded-full mt-1.5 -start-1.5 border border-gray-900" style={`background-color: ${experiencie.ball}`} ></div>
         <ExperienceItem {...experiencie} />
       </li>
     ))

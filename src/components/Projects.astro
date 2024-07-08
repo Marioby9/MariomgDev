@@ -1,5 +1,6 @@
 ---
 import GitHub from "./icons/GitHub.astro"
+import Android from "./icons/Android.astro"
 import CSS from "./icons/CSS.astro"
 import Tailwind from "./icons/Tailwind.astro"
 import VUE from "./icons/VUE.astro"
@@ -7,6 +8,7 @@ import FirebaseJS from "./icons/FirebaseJS.astro"
 import PHP from "./icons/PHP.astro"
 import JS from "./icons/JS.astro"
 import MySQL from "./icons/MySQL.astro"
+import Ionic from "./icons/Ionic.astro"
 import LinkButton from "./LinkButton.astro"
 
 
@@ -46,8 +48,22 @@ const TAGS = {
     class: "bg-[#003159] text-white",
     icon: MySQL,
   },
+  IONIC: {
+    name: "Ionic",
+    class: "bg-[#003159] text-white",
+    icon: Ionic,
+  },
 }
 const PROJECTS = [
+{
+    title: "WikiTravel - Conoce los sitios de interés que te rodean",
+    description:
+      "Aplicación móvil diseñada para viajeros empedernidos, los que nunca se cansan de visitar nuevos lugares y vivir nuevas experiencias constantemente. Podrás conocer qué sitios de interés te rodean. Creado desde cero con VUE.js, Ionic y Tailwind CSS.",
+    link: "https://signvm-flex.web.app/",
+    android: "/MariomgDev/apks/WikiTravel.apk",
+    image: "/MariomgDev/projects/wikitravel.webp",
+    tags: [TAGS.VUE, TAGS.IONIC, TAGS.FIREBASE, TAGS.TAILWIND],
+  },
   {
     title: "FLEX - Una aplicación para tus rutinas de gimnasio",
     description:
@@ -56,15 +72,6 @@ const PROJECTS = [
     github: "https://github.com/Marioby9/Flex",
     image: "/MariomgDev/projects/Flex.webp",
     tags: [TAGS.VUE, TAGS.FIREBASE, TAGS.TAILWIND],
-  },
-  {
-    title: "BookSphere - Aplicación web gestora para una biblioteca",
-    description:
-      "Aplicación web para gestionar tu propia biblioteca de libros. Parte de cliente y administrador. Creada desde cero con HTML5, CSS3, PHP, y JavaScript",
-    link: "https://bookspheredev.000webhostapp.com/",
-    github: "https://github.com/Marioby9/BookSphere",
-    image: "/MariomgDev/projects/booksphere.webp",
-    tags: [TAGS.PHP, TAGS.JS, TAGS.CSS, TAGS.MYSQL],
   },
   {
     title: "NovaForge - Aplicación IOT de domótica para controlar tu hogar",
@@ -80,7 +87,7 @@ const PROJECTS = [
 
 <div class="flex flex-col gap-y-16">
   {
-    PROJECTS.map(({ image, title, description, tags, link, github }) => (
+    PROJECTS.map(({ image, title, description, tags, link, github, android }) => (
       <article>
         <h3 class="text-2xl font-semibold text-yellow-200 mb-2">
           {title}
@@ -109,6 +116,12 @@ const PROJECTS = [
             <LinkButton href={github}>
               <GitHub class="size-6" />
               Ver código fuente
+            </LinkButton>
+          )}
+          {android && (
+            <LinkButton href={android}>
+              <Android class="size-6" />
+              Descargar APK
             </LinkButton>
           )}
           <LinkButton href={link}>
