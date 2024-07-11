@@ -1,88 +1,11 @@
 ---
 import GitHub from "./icons/GitHub.astro"
 import Android from "./icons/Android.astro"
-import CSS from "./icons/CSS.astro"
-import Tailwind from "./icons/Tailwind.astro"
-import VUE from "./icons/VUE.astro"
-import FirebaseJS from "./icons/FirebaseJS.astro"
-import PHP from "./icons/PHP.astro"
-import JS from "./icons/JS.astro"
-import MySQL from "./icons/MySQL.astro"
-import Ionic from "./icons/Ionic.astro"
 import LinkButton from "./LinkButton.astro"
+import ALLPROJECTS from "./ProjectsList"
 
 
-const TAGS = {
-  TAILWIND: {
-    name: "Tailwind CSS",
-    class: "bg-[#003159] text-white",
-    icon: Tailwind,
-  },
-  VUE: {
-    name: "VUE",
-    class: "bg-[#003159] text-white",
-    icon: VUE,
-  },
-  FIREBASE: {
-    name: "Firebase",
-    class: "bg-[#003159] text-white",
-    icon: FirebaseJS,
-  },
-  PHP: {
-    name: "PHP",
-    class: "bg-[#003159] text-white",
-    icon: PHP,
-  },
-  JS: {
-    name: "JavaScript",
-    class: "bg-[#003159] text-white",
-    icon: JS,
-  },
-  CSS: {
-    name: "CSS",
-    class: "bg-[#003159] text-white",
-    icon: CSS,
-  },
-  MYSQL: {
-    name: "MySQL",
-    class: "bg-[#003159] text-white",
-    icon: MySQL,
-  },
-  IONIC: {
-    name: "Ionic",
-    class: "bg-[#003159] text-white",
-    icon: Ionic,
-  },
-}
-const PROJECTS = [
-{
-    title: "WikiTravel - Conoce los sitios de interés que te rodean",
-    description:
-      "Aplicación móvil diseñada para viajeros empedernidos, los que nunca se cansan de visitar nuevos lugares y vivir nuevas experiencias constantemente. Podrás conocer qué sitios de interés te rodean. Creado desde cero con VUE.js, Ionic y Tailwind CSS.",
-    link: "https://signvm-flex.web.app/",
-    android: "/MariomgDev/apks/WikiTravel.apk",
-    image: "/MariomgDev/projects/wikitravel.webp",
-    tags: [TAGS.VUE, TAGS.IONIC, TAGS.FIREBASE, TAGS.TAILWIND],
-  },
-  {
-    title: "FLEX - Una aplicación para tus rutinas de gimnasio",
-    description:
-      "Aplicación web móvil para llevar un seguimiento de tus rutinas y ejercicios de gimnasio. Creado desde cero con VUE.js, Firebase y Tailwind CSS.",
-    link: "https://signvm-flex.web.app/",
-    github: "https://github.com/Marioby9/Flex",
-    image: "/MariomgDev/projects/Flex.webp",
-    tags: [TAGS.VUE, TAGS.FIREBASE, TAGS.TAILWIND],
-  },
-  {
-    title: "NovaForge - Aplicación IOT de domótica para controlar tu hogar",
-    description:
-      "Aplicación web para gestionar espacios con sensores y ejecutores. Parte de cliente y servidor a consumir. Creada desde cero con VUE.js y Tailwind CSS.",
-    link: "https://marioby9.github.io/NovaForge/",
-    github: "https://github.com/Marioby9/NovaForge",
-    image: "/MariomgDev/projects/novaforge.webp",
-    tags: [TAGS.VUE, TAGS.FIREBASE, TAGS.TAILWIND],
-  },
-]
+const PROJECTS = ALLPROJECTS.slice(0,3)
 ---
 
 <div class="flex flex-col gap-y-16">

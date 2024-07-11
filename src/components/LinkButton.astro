@@ -1,10 +1,10 @@
 ---
-const { href } = Astro.props
+const { href, newWindow = true } = Astro.props
 ---
 
 <a
   href={href}
-  target="_blank" rel="noopener noreferrer"
+  target={newWindow ? '_blank' : ''} rel={newWindow ? 'noopener noreferrer' : ''}
   class="bg-white/5
     border border-white/10
     rounded-full
