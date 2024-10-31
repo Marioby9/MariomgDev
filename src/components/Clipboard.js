@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
     if (copyEmailButton) {
       copyEmailButton.addEventListener('click', () => {
-        const email = 'mmartin.mrmg@gmail.com'
+        const email = 'contacto@mariomg.es'
         navigator.clipboard.writeText(email).then(() => {
           //alert('Correo copiado al portapapeles');
         }).catch(err => {
