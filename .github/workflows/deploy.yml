@@ -19,17 +19,27 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Install, build, and upload your Astro site
-        uses: withastro/action@v1
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: 18
-          package-manager: pnpm@latest
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: latest
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build Astro site
+        run: pnpm run build
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: github-pages-artifact
-          path: ./dist  # Astro genera la carpeta dist con los archivos estáticos
+          path: ./dist
 
   deploy:
     needs: build
