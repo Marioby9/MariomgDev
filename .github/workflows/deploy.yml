@@ -14,29 +14,24 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
+      - uses: actions/checkout@v3
+      
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 18
-
+      
       - name: Setup pnpm
         uses: pnpm/action-setup@v2
         with:
           version: latest
 
-      - name: Install dependencies
-        run: pnpm install
-
-      - name: Build Astro site
-        run: pnpm run build
+      - run: pnpm install
+      - run: pnpm run build
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           artifact_name: github-pages-artifact
-        # El deploy-pages automáticamente detecta ./dist si no se indica path
-        # Si tu build genera en otra carpeta, configúrala en el build y artifact_name si necesario
+        # deploy-pages@v2 detecta ./dist por defecto y lo publica
