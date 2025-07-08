@@ -1,1 +1,0 @@
-import"./hoisted.C-deqJEA.js";document.addEventListener("DOMContentLoaded",()=>{const t=document.getElementById("mail");t&&t.addEventListener("click",()=>{navigator.clipboard.writeText("contacto@mariomg.es").then(()=>{}).catch(n=>{})})});
