@@ -1,5 +1,18 @@
 ---
  const personalImageAlt = "Mario Martín picture"
+
+ const getCurrentAge = () => {
+  const today = new Date()
+  const bornDate = new Date(2002, 5, 18)
+  const month = today.getMonth() - bornDate.getMonth()
+  let currentAge = today.getFullYear() - bornDate.getFullYear()
+  if (month < 0 || (month === 0 && today.getDate() < bornDate.getDate())) {
+    currentAge--
+  }
+  return currentAge
+}
+ 
+
 ---
 
 <article class="flex flex-col md:flex-row gap-8 justify-center items-center">
@@ -7,7 +20,7 @@
     class="[&>p]:mb-4 [&>p>strong]:text-yellow-400 [&>p>strong]:font-semibold text-pretty order-2 md:order-1"
   >
     <p>
-      Me llamo Mario Martín y tengo 22 años. Terminé el Bachillerato y me empecé a interesar por la programación web. Actualmente estoy <strong
+      Me llamo Mario Martín y tengo {getCurrentAge()} años. Terminé el Bachillerato y me empecé a interesar por la programación web. Actualmente estoy <strong
         >disfrutando de crear páginas web con una buena experiencia de usuario</strong
       >.
     </p>
