@@ -1,0 +1,43 @@
+---
+const UPCOMING_ITEMS = [
+  {
+    title: "Especialización en Docker",
+    status: "En curso",
+    active: true,
+  },
+  {
+    title: "Especialización en Kubernetes",
+    status: "Próximamente",
+    active: false,
+  },
+  {
+    title: "Certificado Azure AZ-900",
+    status: "Próximamente",
+    active: false,
+  },
+  {
+    title: "Certificado Azure AZ-204",
+    status: "Próximamente",
+    active: false,
+  },
+];
+---
+
+<ol class="relative border-s border-gray-200 ml-3">
+  {
+    UPCOMING_ITEMS.map((item) => (
+      <li class="mb-8 ms-4">
+        <div
+          class:list={[
+            "absolute w-3 h-3 rounded-full mt-1.5 -start-1.5 border",
+            item.active ? "border-gray-900 bg-sky-300" : "border-gray-700 bg-gray-600",
+          ]}
+        ></div>
+        <h3 class:list={["text-lg font-semibold", item.active ? "text-white" : "text-gray-500"]}>
+          {item.title}
+        </h3>
+        <p class:list={["text-sm", item.active ? "text-sky-200" : "text-gray-600"]}>{item.status}</p>
+      </li>
+    ))
+  }
+</ol>

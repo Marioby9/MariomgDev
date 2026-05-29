@@ -15,8 +15,7 @@ import ProfileCheck from "@/components/icons/ProfileCheck.astro"
 import Projects from "@/components/Projects.astro"
 import SectionContainer from "@/components/SectionContainer.astro"
 import SocialPill from "@/components/SocialPill.astro"
-import BlogIcon from "@/components/icons/BlogIcon.astro"
-import Blog from "@/components/Blog.astro"
+import Upcoming from "@/components/Upcoming.astro"
 ---
 
 <Layout
@@ -119,14 +118,13 @@ import Blog from "@/components/Blog.astro"
       <AboutMe />
     </SectionContainer>
 
-    <SectionContainer id="blog">
+    <SectionContainer id="proximamente">
       <h2
         class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-white/80"
       >
-        <BlogIcon class="size-7" />
-        Blog
+        Próximamente
       </h2>
-      <Blog/>
+      <Upcoming />
     </SectionContainer>
   </main>
   <script src="/src/components/Clipboard.js"></script>
