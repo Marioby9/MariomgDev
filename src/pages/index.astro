@@ -1,4 +1,4 @@
----
+﻿---
 import Layout from "@/layouts/Layout.astro"
 
 import AboutMe from "@/components/AboutMe.astro"
@@ -16,6 +16,8 @@ import Projects from "@/components/Projects.astro"
 import SectionContainer from "@/components/SectionContainer.astro"
 import SocialPill from "@/components/SocialPill.astro"
 import Upcoming from "@/components/Upcoming.astro"
+import BlogIcon from "@/components/icons/BlogIcon.astro"
+import LatestBlog from "@/components/LatestBlog.astro"
 ---
 
 <Layout
@@ -48,7 +50,7 @@ import Upcoming from "@/components/Upcoming.astro"
           Desarrollador de aplicaciones web.
         </span>
         <span class="text-yellow-200">
-          Especializado en Angular y .NET
+          Especializado en .NET, Angular y Azure.
         </span>
         <br>
         <span class="text-sky-200">
@@ -126,6 +128,24 @@ import Upcoming from "@/components/Upcoming.astro"
       </h2>
       <Upcoming />
     </SectionContainer>
+
+    <SectionContainer id="blog">
+      <h2
+        class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-white/80"
+      >
+        <BlogIcon class="size-7" />
+        Blog
+      </h2>
+      <LatestBlog />
+      <div class="flex justify-center mt-10 text-gray-400">
+        <a href="/Blog" class="flex gap-3 hover:scale-105 transition">
+          <Plus class="size-6 text-gray-400" />
+          Ver más artículos
+        </a>
+      </div>
+    </SectionContainer>
   </main>
-  <script src="/src/components/Clipboard.js"></script>
+  <script is:inline src="/Clipboard.js"></script>
 </Layout>
+
+

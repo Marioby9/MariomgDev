@@ -1,0 +1,18 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import SectionContainer from "@/components/SectionContainer.astro";
+import BlogIcon from "@/components/icons/BlogIcon.astro";
+import AllBlogs from "@/components/AllBlogs.astro";
+---
+
+<Layout title="Blog" description="Articulos sobre desarrollo de software de Mario Martin.">
+  <main class="px-4">
+    <SectionContainer class="mt-10">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-white/80">
+        <BlogIcon class="size-7" />
+        Articulos
+      </h2>
+      <AllBlogs />
+    </SectionContainer>
+  </main>
+</Layout>
