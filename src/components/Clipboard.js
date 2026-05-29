@@ -1,7 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
   const copyEmailButton = document.getElementById('mail');
+  const emailText = document.getElementById('contact-email');
 
   if (copyEmailButton) {
+    const email = ['contacto', '@', 'mariomg.es'].join('');
+
+    if (emailText) {
+      emailText.textContent = email;
+    }
+
     // Crear el mensaje flotante si no existe
     let tooltip = document.createElement('div');
     tooltip.textContent = 'Copiado';
@@ -26,7 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
     copyEmailButton.appendChild(tooltip);
 
     copyEmailButton.addEventListener('click', () => {
-      const email = 'contacto@mariomg.es';
       navigator.clipboard.writeText(email).then(() => {
         tooltip.style.opacity = '1';
         setTimeout(() => {
