@@ -7,6 +7,10 @@ import CSS from "./icons/CSS.astro";
 import MySQL from "./icons/MySQL.astro";
 import Java from "./icons/Java.astro";
 import Ionic from "./icons/Ionic.astro";
+import DotNet from "./icons/DotNet.astro";
+import Angular from "./icons/Angular.astro";
+import PostgreSQL from "./icons/PostgreSQL.astro";
+import Azure from "./icons/Azure.astro";
 
 const TAGS = {
   TAILWIND: {
@@ -58,6 +62,26 @@ const TAGS = {
     name: "Ionic",
     class: "bg-[#003159] text-white",
     icon: Ionic,
+  },
+  DOTNET: {
+    name: ".NET",
+    class: "bg-[#003159] text-white",
+    icon: DotNet,
+  },
+  ANGULAR: {
+    name: "Angular",
+    class: "bg-[#003159] text-whitee",
+    icon: Angular,
+  },
+  POSTGRESQL: {
+    name: "PostgreSQL",
+    class: "bg-[#003159] text-white",
+    icon: MySQL,
+  },
+  AZURE: {
+    name: "Azure",
+    class: "bg-[#003159] text-white",
+    icon: Azure,
   },
 };
 

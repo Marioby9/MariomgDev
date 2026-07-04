@@ -4,6 +4,15 @@ import TAGS from "./Tags.js";
 
 const PROJECTS = [
   {
+    title: "SchoolSearch - Encuentra tu empleo como educador",
+    description:
+      "Aplicación orientada a la búsqueda de centros educativos, con funcionalidades de búsqueda, filtrado y visualización de información detallada. Envía tu CV y postúlate a los centros educativos que más te interesen.",
+    link: "https://schoolsearch.mariomg.es/",
+    github: "https://github.com/Marioby9/SchoolSearch",
+    image: "/projects/schoolsearch.webp",
+    tags: [TAGS.DOTNET, TAGS.ANGULAR, TAGS.POSTGRESQL, TAGS.AZURE],
+  },
+  {
     title: "WikiTravel - Conoce los sitios de interés que te rodean",
     description:
       "Aplicación móvil diseñada para viajeros empedernidos, los que nunca se cansan de visitar nuevos lugares y vivir nuevas experiencias constantemente. Podrás conocer qué sitios de interés te rodean. Creado desde cero con VUE.js, Ionic y Tailwind CSS.",
