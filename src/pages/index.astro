@@ -32,32 +32,31 @@ import LatestBlog from "@/components/LatestBlog.astro"
         alt="Mario photo"
       />
       <h1
-        class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
+        class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-col items-start gap-3 pb-6 lg:pb-10"
       >
-        Hola, soy Mario Martín <a
+        <a
           href="https://www.linkedin.com/in/mario-martin-godoy/"
           target="_blank"
           rel="noopener"
-          class="flex justify-center items-center hover:scale-105 transition"
+          class="flex justify-center items-center hover:scale-105 transition [&_div]:text-xs md:[&_div]:text-sm"
         >
           <Badge>Actualmente en Stiga CX</Badge>
         </a>
+        <span>Hola, soy Mario Martín</span>
       </h1>
       <h2
-        class="text-xl lg:text-2xl text-balance max-w-[700px] text-white"
+        class="text-xl lg:text-2xl w-full max-w-[700px] text-white"
       >
-        <span>
+        <span class="block">
           Desarrollador de aplicaciones web.
         </span>
-        <span class="text-yellow-200">
+        <span class="block text-yellow-200">
           Especializado en .NET, Angular y Azure.
         </span>
-        <br>
-        <span class="text-sky-200">
+        <span class="block text-sky-200">
           Creador de soluciones eficientes y escalables.
         </span>
-        <br>
-        <span class="text-red-200">
+        <span class="block text-red-200">
           De Madrid, España.
         </span>
       </h2>
